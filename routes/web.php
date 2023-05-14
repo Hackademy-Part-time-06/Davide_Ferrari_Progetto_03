@@ -20,3 +20,5 @@ Route::get('/', [PageController::class, 'homepage'])->name('homepage');
 Route::get('/chi-siamo', [PageController::class, 'chisiamo'])->name('chisiamo');
 
 Route::get('/contatti', [PageController::class, 'contatti'])->name('contatti');
+
+Route::get('/detail/', [PageController::class, 'funzionevolo'])->name('dettaglivolo'); // COMPLETARE FUNZIONE
