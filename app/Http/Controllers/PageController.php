@@ -86,7 +86,15 @@ public static $flights = [
     public function contatti () {
             return view('contatti');
         }
-    // public function voli () {
-    //         return view('dettaglivolo');
-    // }
+
+    public function dettaglivolo ($ref) {
+            foreach (self::$flights['departure'] as $flight){
+            if ($flight['city'] == $ref)
+                {
+                    return view('dettaglivolo', ['voloSelezionato' => $flight]);
+                }
+    }
+    abort(404);
 }
+}
+

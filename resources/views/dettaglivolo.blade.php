@@ -48,7 +48,14 @@
 
 
 
-
+      <h2>Arrivi</h2>
+      <div class="card col-3" style="width: 18rem;">
+                  <div class="card-body">
+                      <h5 class="card-title">{{$voloSelezionato['city']}}</h5>
+                      <p class="card-text">Posti totali: {{$voloSelezionato['seats']['total']}}</p>
+                      <p class="card-text">Posti occupati: {{$voloSelezionato['seats']['occupied']}}</p>
+                  </div>
+          </div>
 
 
 

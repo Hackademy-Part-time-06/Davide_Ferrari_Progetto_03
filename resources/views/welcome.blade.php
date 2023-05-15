@@ -58,21 +58,29 @@
           </div>
       </div>
 
-      <h2>Partenze</h2>
-      @foreach($flights['departure'] as $flight)
+      <h2>Arrivi</h2>
+      @foreach($voli['arrival'] as $flight)    
       <div class="card">
         <div class="card-body">
-        <a href="">{{$flight['city']}}</a>
+        <p>City: {{$flight['city']}}</p>
+        <p>Company: {{$flight['company']}}</p>
+        <p>Gate: {{$flight['gate']}}</p>
+        <p>Time: {{$flight['time']}}</p>
         </div>
       </div>
       @endforeach
-      <h2>Arrivi</h2>
 
+      <h2>Partenze</h2>
+      @foreach($voli['departure'] as $flight)
       <div class="card">
         <div class="card-body">
-        <a href=""></a>
+        <p>City:<a href="{{route('dettaglivolo', ['ref'=>$flight['city']])}}" style="text-decoration: none;"> {{$flight['city']}}</a></p>
+        <p>Company: {{$flight['company']}}</p>
+        <p>Gate: {{$flight['gate']}}</p>
+        <p>Time: {{$flight['time']}}</p>
         </div>
       </div>
+      @endforeach
 
 
 
